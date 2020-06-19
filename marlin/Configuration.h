@@ -91,10 +91,10 @@
 #define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-#define CUSTOM_STATUS_SCREEN_IMAGE
+//#define CUSTOM_STATUS_SCREEN_IMAGE
 
 // @section machine
 
@@ -752,7 +752,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140 } // Modification pas E de 93 à 140 (BMG sans réduction)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 97 } // Modification pas E de 93 à 140 (
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -990,7 +990,7 @@
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 6000
+#define XY_PROBE_SPEED 9000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
