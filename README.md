@@ -1,4 +1,8 @@
 # creality cr10v2
-My creality cr-10 v2 profiles for slic3r. 
-Initialy these profiles are made for PLA upto 0.15 layer height. Speed and temperature settings are tuned for my situation where I prefer quality over speed in general. 
-These can give other cr-10 v2 owners a good starting point, so feel free to use this.
+
+This repo contains:
+My creality cr-10 v2 stock Marlin 2.0.5.3 Vanila configurations files. (no bltouch) in the "marlin" folder
+
+My creality cr-10 v2 profiles for slic3r. Currently working with a swiss tech coated 0.3mm nozzle. Which prints very neat right now I would say.
+
+Feel free to use this as a starting point for your own profiles / firmware build.
