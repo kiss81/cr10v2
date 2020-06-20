@@ -710,7 +710,8 @@
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
-#define ENDSTOP_INTERRUPTS_FEATURE
+// comment kiss81: This is enabled in the original firmware, but failed once, so disabled from now
+//#define ENDSTOP_INTERRUPTS_FEATURE
 
 /**
  * Endstop Noise Threshold
@@ -1127,7 +1128,9 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 410
+// comment kiss81: tested this. 410 is tricky, so keep this safe at 410. Advice this even a bit lower when having something like a
+// filament guide intalled when have your filament mounted on top.
+#define Z_MAX_POS 400
 
 /**
  * Software Endstops
@@ -1154,9 +1157,10 @@
   #define MAX_SOFTWARE_ENDSTOP_Z
 #endif
 
-#if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
-  #define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
-#endif
+// comment kiss81: no reason to disable it, so remove from menu
+//#if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
+//  #define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
+//#endif
 
 /**
  * Filament Runout Sensors
