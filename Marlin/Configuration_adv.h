@@ -632,9 +632,9 @@
 #define HOMING_BUMP_MM      { 5, 5, 3 }       // (mm) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR { 3, 3, 6 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
-#define Z_HOME_BUMP_MM 3
+//#define X_HOME_BUMP_MM 5
+//#define Y_HOME_BUMP_MM 5
+//#define Z_HOME_BUMP_MM 3
 
 //#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
 
@@ -1776,16 +1776,16 @@
 // The number of lineear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
 #if ENABLED(SDSUPPORT)
-  #define BLOCK_BUFFER_SIZE 32 // FP (16)
+  #define BLOCK_BUFFER_SIZE 16 // FP (16)
 #else
-  #define BLOCK_BUFFER_SIZE 32 // FP (16)
+  #define BLOCK_BUFFER_SIZE 16 // FP (16)
 #endif
 
 // @section serial
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 8 // FP (4)
+#define BUFSIZE 4 // FP (4)
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
