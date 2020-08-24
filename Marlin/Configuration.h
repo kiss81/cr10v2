@@ -753,7 +753,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 97 } // default cr10 v2
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 780 } // upgraded to 0.9 steppers and BMG
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 390 } // upgraded to 0.9 steppers and BMG
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -814,7 +814,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    2.5  // May be used by Linear Advance
+#define DEFAULT_EJERK    3  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1171,7 +1171,7 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  * By default the firmware assumes HIGH=FILAMENT PRESENT.
  */
-#define FILAMENT_RUNOUT_SENSOR
+//#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   #define FIL_RUNOUT_STATE LOW
