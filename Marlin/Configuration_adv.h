@@ -1606,7 +1606,7 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-#define LIN_ADVANCE
+//#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K 0.1    // Unit: mm compression per 1mm/s extruder speed
@@ -3162,6 +3162,9 @@
  * Execute certain G-code commands immediately after power-on.
  */
 //#define STARTUP_COMMANDS "M17 Z"
+// enable bed levelling during startup and disable the stealtshop on the extruder
+//#define STARTUP_COMMANDS "M420 S\nM569 S0 E"
+#define STARTUP_COMMANDS "M420 S"
 
 /**
  * G-code Macros
